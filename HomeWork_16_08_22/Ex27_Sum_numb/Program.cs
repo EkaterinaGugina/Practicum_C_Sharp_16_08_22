@@ -5,17 +5,12 @@
 Console.Write("Введите число, number = ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int SumNum(int num)
+int sum = 0;
+while (number >= 0)
 {
-    int sum = 0;
-    while (num >= 0)
-    {
-        int n = num % 10;
-        sum += n;
-        num /= 10;
-    }
-   return sum; 
+    int n = number % 10;
+    sum = sum + n;
+    number = number / 10;
 }
-int s = SumNum(number);
 Console.Write("Сумма цифр этого числа равна  ");
-Console.WriteLine(s);
+Console.WriteLine(sum);
