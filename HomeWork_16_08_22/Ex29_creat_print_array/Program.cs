@@ -16,6 +16,7 @@ void PrintNewArray(int[] arr);
     Console.WriteLine($"{arr[i]}]");
 }
 
+
 int[] newarray = new int[8];
 Console.WriteLine("Заполним массив. Введите 8 элементов массива через Enter"); //ввод массива с консоли
 PrintNewArray(newarray);
@@ -26,10 +27,10 @@ PrintNewArray(newarray);
 
 
 //for (int i = 0; i < length; i++)
-   // {
-   //     int num = Convert.ToInt32(Console.ReadLine());
+// {
+//     int num = Convert.ToInt32(Console.ReadLine());
 //       array[i] = num;
- //   }
+//   }
 //    int count = length;       //Вывод массива на экран в квадратных скобках
 //    Console.Write("[");
 //    for (int position = 0; position < 7; position++)
