@@ -3,9 +3,9 @@
 
 Console.WriteLine("Введите два числа");          //ввод данных
 Console.Write("A =");
-int num1 = Convert.ToInt32(Console.ReadLine());
+int A = Convert.ToInt32(Console.ReadLine());
 Console.Write("B =");
-int num2 = Convert.ToInt32(Console.ReadLine());
+int B = Convert.ToInt32(Console.ReadLine());
 
 void Num1DegreeNum2(int n1, int n2)             //метод возведения n1 в степень n2
 {
