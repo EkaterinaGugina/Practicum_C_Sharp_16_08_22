@@ -3,22 +3,21 @@
 
 string Print_array (int[] arr)
 {
-    string result = "[";  //для вывода результата в квадратных скобках
     for (int i = 0; i < arr.Length; i++)
     {
         arr[i] = Convert.ToInt32(Console.ReadLine());
     }
     //заполнение строки элементами массива, первый и последний эл-т строки - квадратные скобки
+    string result = "[";  
     for (int i = 0; i < arr.Length -1; i++)
     {
-        //string p = Convert.ToString(arr[i]) + ",";
         result = result + $"{Convert.ToString(arr[i])}" + ", ";
     }
     result = result + $"{Convert.ToString(arr[arr.Length - 1])}" + "]";
     return result;
 }
 int[] newarray = new int[8];
-Console.WriteLine("Заполним массив. Введите 8 элементов массива через Enter"); //ввод массива с консоли
+Console.WriteLine("Заполним массив. Введите 8 элементов массива через Enter"); 
 string str_array = Print_array(newarray);
 Console.WriteLine(str_array);
 
