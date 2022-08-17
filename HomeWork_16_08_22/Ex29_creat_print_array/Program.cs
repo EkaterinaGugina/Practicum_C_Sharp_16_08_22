@@ -13,10 +13,9 @@ void Print_array (int[] arr)
     {
         Console.Write($"{arr[i]}, ");
     }
-    Console.WriteLine($"{arr[i]}]");
+    int end = arr.Length - 1;
+    Console.WriteLine($"{arr[end]}]");
 }
-
-
 int[] newarray = new int[8];
 Console.WriteLine("Заполним массив. Введите 8 элементов массива через Enter"); //ввод массива с консоли
 Print_array(newarray);
