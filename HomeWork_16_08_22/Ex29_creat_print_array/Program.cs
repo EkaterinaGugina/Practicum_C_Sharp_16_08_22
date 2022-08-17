@@ -1,7 +1,7 @@
 ﻿// Ex29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 
-void PrintNewArray(int[] arr);
+void Print_array (int[] arr)
 {
     for (int i = 0; i < arr.Length; i++)
     {
@@ -19,7 +19,7 @@ void PrintNewArray(int[] arr);
 
 int[] newarray = new int[8];
 Console.WriteLine("Заполним массив. Введите 8 элементов массива через Enter"); //ввод массива с консоли
-PrintNewArray(newarray);
+Print_array(newarray);
 
 
 
