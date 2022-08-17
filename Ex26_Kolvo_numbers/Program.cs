@@ -4,12 +4,12 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 int CountNum(int num)
 {
-    int count = 0; //если не выполнится цикл, будет ясно, что в него не заходили
-    for (int i = 1; num >= 10; i++)
+    int count = 0; 
+    while (num >= 0)
     {
         num = num / 10;
-        count = i +1; 
+        count += 1; 
     }
    return count; 
 }
-Console.Write($"Количество цифр числа {number} равна {CountNum(number)}");
+Console.Write($"Количество цифр числа {number} равно {CountNum(number)}");
