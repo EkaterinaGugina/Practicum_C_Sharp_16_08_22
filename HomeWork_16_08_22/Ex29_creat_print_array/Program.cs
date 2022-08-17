@@ -1,42 +1,46 @@
 ﻿// Ex29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 
-void Print_array (int[] arr)
+string Print_array (int[] arr)
 {
+    string result = "[";  //для вывода результата в квадратных скобках
     for (int i = 0; i < arr.Length; i++)
     {
-        int num = Convert.ToInt32(Console.ReadLine());
-        arr[i] = num;
+        arr[i] = Convert.ToInt32(Console.ReadLine());
     }
-    Console.Write("[");                             //Вывод массива на экран в квадратных скобках
-    for (int i = 0; i < arr.Length - 1; i++)
+    //заполнение строки элементами массива, первый и последний эл-т строки - квадратные скобки
+    for (int i = 0; i < arr.Length -1; i++)
     {
-        Console.Write($"{arr[i]}, ");
+        //string p = Convert.ToString(arr[i]) + ",";
+        result = result + $"{Convert.ToString(arr[i])}" + ", ";
     }
-    int end = arr.Length - 1;
-    Console.WriteLine($"{arr[end]}]");
+    result = result + $"{Convert.ToString(arr[arr.Length - 1])}" + "]";
+    return result;
 }
 int[] newarray = new int[8];
 Console.WriteLine("Заполним массив. Введите 8 элементов массива через Enter"); //ввод массива с консоли
-Print_array(newarray);
+string str_array = Print_array(newarray);
+Console.WriteLine(str_array);
 
 
 
 
 
-
-//for (int i = 0; i < length; i++)
-// {
-//     int num = Convert.ToInt32(Console.ReadLine());
-//       array[i] = num;
-//   }
-//    int count = length;       //Вывод массива на экран в квадратных скобках
-//    Console.Write("[");
-//    for (int position = 0; position < 7; position++)
+//void Print_array (int[] arr)//
+//{
+//    for (int i = 0; i < arr.Length; i++)
 //    {
-//        Console.Write($"{newarray[position]}, ");
+//        int num = Convert.ToInt32(Console.ReadLine());
+//        arr[i] = num;
 //    }
-//    Console.WriteLine($"{newarray[7]}]");
+//    Console.Write("[");                             //Вывод массива на экран в квадратных скобках
+//    for (int i = 0; i < arr.Length - 1; i++)
+    //{
+    //    Console.Write($"{arr[i]}, ");
+    //}
+//    int end = arr.Length - 1;
+ //   Console.WriteLine($"{arr[end]}]");
 //}
-
 //int[] newarray = new int[8];
+//Console.WriteLine("Заполним массив. Введите 8 элементов массива через Enter"); //ввод массива с консоли
+//Print_array(newarray);
